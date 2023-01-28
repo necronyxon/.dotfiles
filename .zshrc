@@ -65,7 +65,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 ###==- theme -==###
-eval `dircolors /home/rafa/.dir_colors/dircolors`
+eval `dircolors $HOME/.dir_colors/dircolors`
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ###==- node -==###
