@@ -82,4 +82,6 @@ export PATH=$PATH:$GOBIN
 
 ###==- aliases -==###
 alias docs='cd ~/git/docs'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+function dotfiles {
+   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+}
