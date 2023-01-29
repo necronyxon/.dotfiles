@@ -82,6 +82,21 @@ export PATH=$PATH:$GOBIN
 
 ###==- aliases -==###
 alias docs='cd ~/git/docs'
-function dotfiles {
+
+# edit nvim config easier
+alias cvim='nvim ~/.config/nvim/'
+
+# source and edit this file easier
+alias zrc='nvim ~/.zshrc'
+alias src='source ~/.zshrc'
+
+# using exa as ls
+alias l='exa -lah'
+alias ls=exa
+alias la='exa -lah'
+alias ll='exa -lh'
+
+# manage dotfiles
+function dot {
    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
