@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# crontab -e
+# 0 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/share/scripts/./theme.sh
+
+cinnamon="/home/rafa/.themes/Custom-Mint-Y-Dark-Blue/cinnamon/cinnamon.css"
+
 _toggle_color(){
   current_color=$( sed '444!d ; s/,//g' "$cinnamon" | grep -Eo '[0-9]{3} [0-9]{3} [0-9]{3}' )
 
@@ -11,7 +16,6 @@ _toggle_color(){
 }
 
 _change_cinnamon_bar_color(){
-  cinnamon="/home/rafa/.themes/Custom-Mint-Y-Dark-Blue/cinnamon/cinnamon.css"
   hour=$(date "+%H") 
 
   case "$hour" in
